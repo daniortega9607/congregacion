@@ -34,5 +34,9 @@ self.__precacheManifest = [
   {
     "revision": "3116146e4d948ce7a1cc",
     "url": "/css/chunk-4257ef99.2825397f.css"
+  },
+  {
+    "revision": "a328665844f536a5a456821b54cf9a49",
+    "url": "/.htaccess"
   }
 ];
