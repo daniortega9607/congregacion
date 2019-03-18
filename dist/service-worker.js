@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.8e1bac065d43a3c26828bb698afc913a.js"
+  "/precache-manifest.7edc2477c1fa909f82117d2590e46f3d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "congregacion"});

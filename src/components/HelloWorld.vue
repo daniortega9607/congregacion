@@ -17,6 +17,7 @@
         <h1 class="display-2 font-weight-bold mb-3">
           Welcome to Vuetify
         </h1>
+        {{msg}}
         <p class="subheading font-weight-regular">
           For help and collaboration with other Vuetify developers,
           <br>please join our online
@@ -86,6 +87,9 @@
 
 <script>
   export default {
+    props: {
+      msg: { default:'my new comment' }
+    },
     data: () => ({
       ecosystem: [
         {
