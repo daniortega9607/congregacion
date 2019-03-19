@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer v-model="drawer" fixed app clipped>
     <v-list dense>
-      <v-list-tile @click="$router.push('/')">
+      <v-list-tile @click="$router.push('/home')">
         <v-list-tile-action>
           <v-icon>location_on</v-icon>
         </v-list-tile-action>

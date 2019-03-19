@@ -5,7 +5,11 @@ import App from './App'
 Vue.use(Router)
 
 export const routes = [
-  { path: '/', component: App },
+  { path: '/', component: App, children: [
+    { path: '', component: () => import('./views/Home.vue') },
+    { path: 'home', component: () => import('./views/Home.vue') },
+    { path: 'asistencia', component: () => import('./views/Assistance.vue') },
+  ] },
   { path: '/login', name: 'login', component: () => import('./views/Login.vue') },
   { path: '*', redirect: '/' }
 ]
