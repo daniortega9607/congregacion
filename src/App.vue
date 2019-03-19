@@ -1,29 +1,20 @@
 <template>
-  <Login :name="Holi" :options="{crayoli:'true', clickHandler}"/>
+  <v-app>
+    <main-drawer />
+    <main-navbar />
+  </v-app>
 </template>
 
 <script>
-import Login from './views/Login'
 
-const Holi = ({props}) => {
-  console.log(props)
-  return <div onClick={props.options.clickHandler}>Holi Crayoli</div>
-}
+import MainNavbar from "@/components/MainNavbar";
+import MainDrawer from "@/components/MainDrawer";
 
 export default {
   name: 'App',
-  components: {
-    Login
-  },
-  methods: {
-    clickHandler() {
-      console.log(this)
-    }
-  },
+  components: { MainDrawer, MainNavbar },
   data () {
     return {
-      //
-      Holi
     }
   }
 }
