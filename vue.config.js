@@ -1,6 +1,7 @@
 module.exports = {
   pwa: {
     name: 'Congregación',
-    msTileColor: '#ffffff'
+    msTileColor: '#ffffff',
+    themeColor: '#2196F3'
   }
 }
