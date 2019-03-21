@@ -7,7 +7,7 @@
         </v-toolbar>
         <v-form style="margin: 15px;">
           <h1>
-            Hola {{user.nombre}} aqui puedes modificar tus datos:
+            Hola {{currentName}} aqui puedes modificar tus datos:
           </h1>
           <v-text-field
             v-model="user.nombre"
@@ -22,6 +22,7 @@
             required
           ></v-text-field>
           <v-text-field
+            v-model="currentPassword"
             :append-icon="show1 ? 'visibility' : 'visibility_off'"
             :type="show1 ? 'text' : 'password'"
             name="input-10-1"
@@ -29,6 +30,7 @@
             @click:append="show1 = !show1"
           ></v-text-field>
           <v-text-field
+          v-model="newPassword"
             :append-icon="show2 ? 'visibility' : 'visibility_off'"
             :type="show2 ? 'text' : 'password'"
             name="input-10-1"
@@ -66,7 +68,37 @@ export default {
       show1: false,
       show2: false,
       show3: false,
+      currentName: "",
+      currentEmail: "",
+      currentPassword: "",
+      newPassword: "",
+      passwordConfirm: "",
     };
   },
+  created(){
+    this.currentName = this.user.nombre;
+  },
+  methods: {
+    Comprobar(){
+      if(this.currentPassword.length == 0){
+        alert("Ingrese la contraseña anterior");
+      }
+      else if(this.newPassword.length < 8){
+        alert("La contraseña debe tener al menos 8 caracteres");
+      }
+      else if(this.user.password != this.currentPassword){
+        alert("La contraseña actual es incorrecta");
+      }
+      else if(this.newPassword != this.passwordConfirm){
+        alert("Las contraseñas no coinciden");
+      }
+      else{
+        alert("Datos modificados con éxito");
+      }
+    },
+    Guardar(){
+      this.Comprobar();
+    }
+  }
 }
 </script>
