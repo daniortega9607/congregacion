@@ -84,7 +84,7 @@ export default {
         alert("Ingrese la contraseña anterior");
       }
       else if(this.newPassword.length < 8){
-        alert("La contraseña debe tener al menos 8 caracteres ");
+        alert("La contraseña debe tener al menos 8 caracteres");
       }
       else if(this.user.password != this.currentPassword){
         alert("La contraseña actual es incorrecta");
